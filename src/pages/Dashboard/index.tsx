@@ -15,7 +15,6 @@ import {
   ProvidersList,
   ProvidersListTitle,
   ProviderContainer,
-  ProviderAvatar,
   ProviderInfo,
   ProviderName,
   ProviderMeta,
@@ -76,11 +75,9 @@ const Dashboard: React.FC = () => {
           <ProviderContainer
             onPress={() => navigateToCreateAppointment(provider.id)}
           >
-            <ProviderAvatar
-              source={{
-                uri: provider.avatar_url != null ? provider.avatar_url : null,
-              }}
-            />
+            <ProfileButton onPress={navigateToProfile}>
+              <UserAvatar source={{ uri: user.avatar_url }} />
+            </ProfileButton>
 
             <ProviderInfo>
               <ProviderName>{provider.name}</ProviderName>
