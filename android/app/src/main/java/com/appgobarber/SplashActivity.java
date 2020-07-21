@@ -1,4 +1,4 @@
-package com.appgobarber;
+package br.com.artmob.appgobarber;
 
 import android.content.Intent;
 import android.os.Bundle;
